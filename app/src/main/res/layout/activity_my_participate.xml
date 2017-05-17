@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="#ededee" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup_option_myParticipateList"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_all_myParticipateList"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="0px"
+                android:text="全部"
+                android:textColor="#ed4c4c"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="#f0f0f0" />
+
+            <RadioButton
+                android:id="@+id/rb_doing_myParticipateList"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0px"
+                android:text="进行中"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="#f0f0f0" />
+
+            <RadioButton
+                android:id="@+id/rb_end_myParticipateList"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0px"
+                android:text="已结束"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/clickBackage_myParticipateList"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:background="#d94443" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_myParticipateList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

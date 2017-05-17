@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/layout_title" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/iv_auctionbail_pic"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loading_90_90" />
+
+            <TextView
+                android:id="@+id/tv_auctionbail_house_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_auctionbail_pic"
+                android:layout_toRightOf="@+id/iv_auctionbail_pic"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_auctionbail_consult_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_auctionbail_auction_price"
+                android:layout_below="@+id/tv_auctionbail_house_name"
+                android:layout_toRightOf="@+id/iv_auctionbail_pic"
+                android:gravity="center_vertical"
+                android:text="参考价："
+                android:textColor="#989898"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_auctionbail_auction_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_auctionbail_pic"
+                android:layout_toRightOf="@+id/iv_auctionbail_pic"
+                android:text="活动价："
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_auctionbail_auction_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_auctionbail_auction_price"
+                android:layout_alignBottom="@+id/tv_auctionbail_auction_price"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/tv_auctionbail_auction_price"
+                android:text=""
+                android:textColor="#ed4d4c"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#eeeeee" />
+
+        <TextView
+            android:id="@+id/tv_auctionbail_address"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="#929292" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f3f3f3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_auctionbail_deposite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="需交纳保证金"
+                android:textColor="@color/important_text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_auctionbail_deposite_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/stress_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="提示：抢购不成功，保证金会在3~15个工作日退回原卡。"
+            android:textColor="#666666"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/tv_auctionbail_needpay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tv_auctionbail_sure"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/stress_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_specialbail_sure"
+            android:layout_width="111dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

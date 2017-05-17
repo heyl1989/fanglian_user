@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f6f6f6">
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
+	    <include 
+	        layout="@layout/layout_title_white"
+	        />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/layout_cleanCache_settingMain"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="#ffffff"
+        android:layout_marginTop="10dip"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除缓存"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            />	
+            
+        <ImageView 
+            android:id="@+id/img_arrowClearCache_settingMain"
+            android:layout_width="8dip"
+            android:layout_height="14dip"
+            android:src="@drawable/right_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            />
+        
+        <TextView 
+            android:id="@+id/tv_cacheSize_settingMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toLeftOf="@+id/img_arrowClearCache_settingMain"
+            android:layout_marginRight="8dip"
+            android:layout_centerVertical="true"
+            android:textColor="#666666"
+            />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/layout_aboutUs_settingMain"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="#ffffff"
+        android:layout_marginTop="0.5dip"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于房链"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            />	
+            
+        <ImageView 
+            android:layout_width="8dip"
+            android:layout_height="14dip"
+            android:src="@drawable/right_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            />
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rl_check_version"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="#ffffff"
+        android:layout_marginTop="0.5dip"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检测新版本"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            />	
+            
+        <ImageView 
+            android:layout_width="8dip"
+            android:layout_height="14dip"
+            android:src="@drawable/right_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/layout_logout_settingMain"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:background="#ffffff"
+        android:layout_marginTop="15dip"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出登录"
+            android:textColor="#ed4c4c"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            />	
+            
+    </RelativeLayout>
+
+</LinearLayout>

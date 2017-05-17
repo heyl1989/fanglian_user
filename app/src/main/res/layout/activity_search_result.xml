@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_newHouseList"
+        android:layout_width="match_parent"
+        android:layout_height="44dip" >
+
+        <RelativeLayout
+            android:id="@+id/layout_titleLayout_newHouseList"
+            android:layout_width="match_parent"
+            android:layout_height="44dip" >
+
+            <include layout="@layout/layout_title" />
+
+            <RelativeLayout
+                android:id="@+id/layout_search_newhouse_list"
+                android:layout_width="58dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true" >
+
+                <ImageView
+                    android:layout_width="38dip"
+                    android:layout_height="20dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_search_house_list" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_titleLayout_search"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/ed_search_newHouseList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:layout_toLeftOf="@+id/layout_search_newhouse_cancle"
+                android:background="@drawable/rounded_edittext_backgroud"
+                android:drawableLeft="@drawable/icon_search"
+                android:gravity="center_vertical"
+                android:hint="请输入楼盘名称"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/layout_search_newhouse_cancle"
+                android:layout_width="58dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true" >
+
+                <TextView
+                    android:layout_width="38dip"
+                    android:layout_height="20dip"
+                    android:layout_centerInParent="true"
+                    android:text="取消"
+                    android:textColor="@color/stress_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/search_result_swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <com.flzc.fanglian.view.LoadListView
+                android:id="@+id/listview_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/theme_background"
+                android:dividerHeight="10dip"
+                android:headerDividersEnabled="true"
+                android:scrollbars="@null"
+                android:visibility="visible" >
+            </com.flzc.fanglian.view.LoadListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/ly_serrch_none"
+            layout="@layout/layout_search_none"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview_search_hintresult"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:divider="#f1f1f1"
+            android:dividerHeight="1dip"
+            android:visibility="gone" >
+        </ListView>
+    </FrameLayout>
+
+</LinearLayout>

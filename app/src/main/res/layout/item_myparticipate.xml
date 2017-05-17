@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/theme_background"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dip" >
+
+        <ImageView
+            android:id="@+id/img_actType_item_participate"
+            android:layout_width="21dip"
+            android:layout_height="21dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/act_type_hui" />
+
+        <TextView
+            android:id="@+id/tv_actType_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/img_actType_item_participate"
+            android:text="活动"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_timeType_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:text="活动状态"
+            android:textColor="#ed4c4c"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:background="#f6f6f6" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip" >
+
+        <TextView
+            android:id="@+id/tv_buildingName_item_participate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="9dip"
+            android:layout_toLeftOf="@+id/tv_priceHint_item_participate"
+            android:text="楼盘"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_price_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dip"
+            android:text="价格"
+            android:textColor="#ed4c4c"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_priceHint_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:layout_toLeftOf="@+id/tv_price_item_participate"
+            android:text="参考价："
+            android:textColor="#666666"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_actInfo_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_buildingName_item_participate"
+            android:layout_marginTop="14dip"
+            android:lineSpacingExtra="3dip"
+            android:text="活动信息"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/tv_actStatus_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="#222222"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_hintInfo_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rewardInfo_item_participate"
+            android:layout_marginTop="14dip"
+            android:text="注：活动保证金将于3~15个工作日内原路退回"
+            android:textColor="#666666"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_rewardInfo_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_actInfo_item_participate"
+            android:layout_marginTop="14dip"
+            android:textColor="#666666"
+            android:visibility="gone" />
+
+        
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dashed" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip" >
+
+        <TextView
+            android:id="@+id/tv_timeHint_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="参加时间："
+            android:textColor="#999999" />
+
+        <TextView
+            android:id="@+id/tv_time_item_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_timeHint_item_participate"
+            android:text=""
+            android:textColor="#999999" />
+
+        <ImageView
+            android:id="@+id/img_checkAct_item_participate"
+            android:layout_width="62dip"
+            android:layout_height="22dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/check_act" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#ececec" />
+
+</LinearLayout>

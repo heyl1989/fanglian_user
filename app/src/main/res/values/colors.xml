@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_background">#f3f3f3</color>
+    <color name="white">#ffffff</color>
+    <color name="black_word">#333333</color>
+    <color name="light_red">#feeeea</color>
+    <color name="grey_word">#c1c1c1</color>
+    <color name="grey_green_word">#507fb0</color>
+    <color name="red_word">#eded4c4c</color>
+    <color name="line">#f5f5f5</color>
+    <color name="title_head">#fafafa</color>
+    <!-- 用户辅助,次要的文字信息  如位置信息，辅助性描述-->
+    <color name="helper_user_text_color">#999999</color>
+    <!-- 普通的段落信息，如详情段落，大段文字，介绍-->
+    <color name="common_text_color">#666666</color>
+    <!-- 重要级文字信息，标题信息。如 导航名称，大板块标题，类目名称等-->
+    <color name="important_text_color">#333333</color>
+    <!-- 小面积使用，用户特别需要强调突出的文字，按钮-->
+    <color name="stress_text_color">#ed4c4c</color>
+    <!-- 小面使用，层级比较弱的文字信息-->
+    <color name="weak_level">#cccccc</color>
+    <!-- 分割板块的背景色-->
+    <color name="divider_plate">#f0f0f0</color>
+    <!-- 分割线颜色-->
+    <color name="divider_line">#f6f6f6</color>
+    
+    <!-- 下拉刷新的颜色 -->
+    
+    
+</resources>

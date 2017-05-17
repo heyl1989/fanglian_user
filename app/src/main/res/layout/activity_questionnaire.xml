@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background" >
+
+    <include
+        android:id="@+id/questionnaire_title"
+        layout="@layout/layout_title_white" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_below="@+id/questionnaire_title"
+        android:layout_marginTop="0.5dp"
+        android:background="#fff0db"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="提交购房意向，获得优质楼盘推荐"
+            android:textColor="#ff9000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView 
+        android:id="@+id/questionnaire_submit"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="提交"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_red_round"
+        android:layout_alignParentBottom="true"/>
+    
+    <ListView 
+        android:id="@+id/questionnaire_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/questionnaire_submit"
+        android:layout_below="@+id/ll_title"
+        android:divider="@null"
+        android:background="@android:color/transparent"
+        android:scrollbars="none">
+        
+    </ListView>
+</RelativeLayout>

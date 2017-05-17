@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_biding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.flzc.fanglian.view.ObservableScrollView
+            android:id="@+id/sv_bidding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="232dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/loading_750_438"
+                    android:visibility="visible" />
+
+                <include
+                    layout="@layout/layout_activity_downtime"
+                    android:visibility="visible" />
+
+                <include
+                    layout="@layout/layout_activity_kindpic"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#fedfd7"
+                    android:visibility="visible" />
+
+                <include
+                    layout="@layout/layout_activity_houseinfo"
+                    android:visibility="visible" />
+
+                <include
+                    layout="@layout/layout_activity_payway"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_bidding"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/cup_gold"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="竞拍规则"
+                    android:textColor="@color/black_word"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="84dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="竞拍保证金："
+                            android:textColor="#999999"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_bidpaymoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="1000元"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="允许出价次数："
+                            android:textColor="#999999"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_bidtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="3此"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="竞拍开始时间："
+                            android:textColor="#999999"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_bidstarttime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="1000元"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="竞拍开奖时间："
+                            android:textColor="#999999"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_bidendtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="1000元"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#fff3e0"
+                        android:drawableLeft="@drawable/light_inactivity"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="竞拍模式：暗拍模式          中奖规则：最高出价且唯一者得"
+                        android:textColor="#ff7d06"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="*保证金只是锁定了，不会少，竞拍不成功将原路退回"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/layout_activity_user"
+                    android:visibility="visible" />
+
+                <include
+                    layout="@layout/layout_activity_host"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ll_bidrule"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="竞拍须知"
+                        android:textColor="@color/black_word"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/right_arrow" />
+                </LinearLayout>
+                
+                <View 
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"/>
+            </LinearLayout>
+        </com.flzc.fanglian.view.ObservableScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bidding_bottom_one"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+             android:background="#ed4c4c"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone" >
+            
+            <TextView
+                android:id="@+id/tv_bid_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即抢购"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_time_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_state_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="距结束："
+                    android:textColor="#f3f3f3" />
+
+                <com.flzc.fanglian.view.TimeViewWhiteWordHM
+                    android:id="@+id/time_hm_downtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+           
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bidding_bottom_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2" >
+
+            <ImageView
+                android:id="@+id/img_consult_shop_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/refer_sales" />
+
+            <TextView
+                android:id="@+id/tv_remind"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fba952"
+                android:drawableTop="@drawable/bell_remind"
+                android:gravity="center|center_vertical"
+                android:paddingTop="5dp"
+                android:text="提醒我"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_enRoll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ed4c4c"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_enroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="报名"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/tv_enroll_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="保证金元"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

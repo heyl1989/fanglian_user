@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" >
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="11dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="#ec4d4c" />
+
+        <TextView
+            android:id="@+id/tv_discribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="置业顾问"
+            android:textColor="@color/black_word"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_counselor_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_discribe"
+            android:text="(30人)"
+            android:textColor="#f4775c"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_look_allcounselor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="查看更多"
+            android:textColor="@color/grey_word"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+    <com.flzc.fanglian.view.ListViewForScrollView 
+        android:id="@+id/lv_counselor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

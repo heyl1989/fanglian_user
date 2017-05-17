@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/line"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="支付方式"
+            android:textSize="14sp"
+            android:textColor="@color/black_word"/>
+         <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/line"/>
+            
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/tv_payway_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:text="竞拍成功后，您将获得竞拍所出价的线下购房资格，实际购房交易在开发商售楼处完成。"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#f8f8f8"
+        >
+         
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/pay_way_item"
+            android:drawablePadding="5dp"
+            android:text="违约赔付"
+            android:textSize="12sp"
+            android:textColor="#666666"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/pay_way_item"
+            android:drawablePadding="5dp"
+            android:text="真实房源"
+            android:textSize="12sp"
+            android:textColor="#666666"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/pay_way_item"
+            android:drawablePadding="5dp"
+            android:text="公平公正"
+            android:textSize="12sp"
+            android:textColor="#666666"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/pay_way_item"
+            android:drawablePadding="5dp"
+            android:text="资金安全"
+            android:textSize="12sp"
+            android:textColor="#666666"/>
+        
+    </LinearLayout>
+    
+
+</LinearLayout>

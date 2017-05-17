@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <ImageView
+            android:id="@+id/iv_icon_activity"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/act_type_pai" />
+
+        <TextView
+            android:id="@+id/tv_order_activity_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_icon_activity"
+            android:text="竞拍宝活动"
+            android:textColor="@color/black_word"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_activity_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="已结束"
+            android:textColor="@color/black_word"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" 
+        android:background="@color/line"/>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="76dp">
+        
+        <ImageView
+            android:id="@+id/img_order_house" 
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/loading_72_72"
+            />
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_order_house"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView 
+                android:id="@+id/tv_order_activity_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:maxWidth="180dp"
+                android:textColor="@color/black_word"
+                android:text="亿城眼份电话积分兑换vsfs"/>
+            <TextView 
+                android:id="@+id/tv_order_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:text="订单时间：2016-89-hjs"/>
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <TextView 
+                android:id="@+id/tv_orderlist_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_gravity="right"
+                android:textColor="#ed4c4c"
+                android:text="¥100元"/>
+            <TextView 
+                android:id="@+id/tv_pay_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="right"
+                android:textSize="14sp"
+                android:textColor="@color/black_word"
+                android:text="已支付"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

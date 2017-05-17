@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_mainLayout_biddingHouseInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0" >
+
+    <RelativeLayout
+        android:id="@+id/rl_backLayout_biddingHouseInfo"
+        android:layout_width="40dip"
+        android:layout_height="40dip" >
+
+        <ImageView
+            android:layout_width="10dip"
+            android:layout_height="18dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/left_arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bidding_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_time_down"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#969696"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_flag_timedown"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="距活动开始仅剩："
+                android:textColor="#f3f3f3" />
+
+            <com.flzc.fanglian.view.TimeViewWhiteWord
+                android:id="@+id/time_view_downtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_flag_timedown" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_getReward_biddingHouseInfos"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="#ee5353"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bidding_bottom"
+        android:background="#ffffff"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_mainImgLayout_biddingHouseInfo"
+                android:layout_width="match_parent"
+                android:layout_height="330dip" >
+
+                <ImageView
+                    android:id="@+id/img_mainImg_biddingHouseInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/loading_72_72"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#f6f6f6" />
+
+                <LinearLayout
+                    android:id="@+id/ll_currentPriceLayout_biddingHouseInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="14dip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="16dip"
+                        android:layout_height="16dip"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_bidding" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:text="¥"
+                        android:textColor="#ed4c4c" />
+
+                    <TextView
+                        android:id="@+id/tv_currentPrice_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dip"
+                        android:text=" "
+                        android:textColor="#ed4c4c"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:text="元/㎡"
+                        android:textColor="#ed4c4c" />
+
+                    <ImageView
+                        android:layout_width="33dip"
+                        android:layout_height="13dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:src="@drawable/icon_bidding_price" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_formerPriceLayout_biddingHouseInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_currentPriceLayout_biddingHouseInfo"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_formerPriceHint_biddingHouseInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="市场价："
+                            android:textSize="12sp"
+                            android:textColor="#999999" />
+
+                        <TextView
+                            android:id="@+id/tv_formerPrice_biddingHouseInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0元/㎡"
+                            android:textSize="12sp"
+                            android:textColor="#999999" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginTop="-10dp"
+                        android:background="#999999" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/ll_formerPriceLayout_biddingHouseInfo"
+                    android:layout_marginTop="14dip"
+                    android:background="#f6f6f6" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_houseTypeHint_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:text="户型："
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/tv_houseType_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dip"
+                        android:text=""
+                        android:textColor="#333333" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acreageeHint_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:text="建筑面积："
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/tv_acreagee_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dip"
+                        android:text=""
+                        android:textColor="#333333" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_buildingNumHint_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:text="楼号："
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/tv_buildingNum_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dip"
+                        android:text=""
+                        android:textColor="#333333" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_unitNumHint_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:text="单元号："
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/tv_unitNum_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dip"
+                        android:text=""
+                        android:textColor="#333333" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_floorHint_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:text="房号："
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/tv_floor_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dip"
+                        android:text=""
+                        android:textColor="#333333" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_residenceTypeHint_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:text="住宅类型："
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/tv_residenceType_biddingHouseInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dip"
+                        android:text=""
+                        android:textColor="#333333" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="10dip"
+                android:background="#f6f6f6" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#f0f0f0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#f6f6f6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:text="楼盘"
+                    android:textColor="#999999"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_name_biddingHouseInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dip"
+                    android:text=""
+                    android:textColor="#222222"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#f6f6f6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:text="地址"
+                    android:textColor="#999999"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_address_biddingHouseInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dip"
+                    android:text=""
+                    android:textColor="#222222"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#f0f0f0" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

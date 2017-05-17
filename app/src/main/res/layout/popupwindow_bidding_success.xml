@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.3"
+        />
+    
+    <RelativeLayout 
+        android:layout_width="220dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_backgroud"
+        android:layout_centerInParent="true"
+        >
+        <ImageView 
+            android:id="@+id/img_icon_biddingSuccess"
+            android:layout_width="89dip"
+            android:layout_height="70dip"
+            android:src="@drawable/bidding_success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            />
+        
+        <TextView 
+            android:id="@+id/tv_contentHint_biddingSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_icon_biddingSuccess"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:text="亲，你已经出价成功，你还有 次出价机会！"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            />
+        
+        <View 
+            android:id="@+id/greyLine_biddingSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#f6f6f6"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_below="@+id/tv_contentHint_biddingSuccess"
+            android:layout_marginTop="20dip"
+            />
+        
+        <RelativeLayout 
+            android:id="@+id/rl_backLayout_biddingSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_below="@+id/greyLine_biddingSuccess"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_centerInParent="true"
+                />
+            
+        </RelativeLayout>
+        
+    </RelativeLayout>
+    
+
+</RelativeLayout>

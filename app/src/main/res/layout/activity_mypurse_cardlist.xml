@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.flzc.fanglian.view.ListViewForScrollView
+                android:id="@+id/lv_cardlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="@color/line"
+                android:dividerHeight="1dp"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_add_card"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_add"
+                android:gravity="center"
+                android:text="+添加银行卡"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="客服电话：400-175-8080\nservice@fanglianzhongchou.com"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+</LinearLayout>

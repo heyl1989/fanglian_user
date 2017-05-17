@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_cashList_drawCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="提现"
+                android:textColor="@color/black_word"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_cashList_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="100元"
+                android:textColor="@color/red_word"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tv_cashList_cardId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="卡号：11111111"
+                android:textColor="@color/grey_word"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_cashList_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_cashList_cardId"
+                android:layout_marginTop="5dp"
+                android:text="2016-01-01"
+                android:textColor="@color/grey_word"
+                android:textSize="12sp" />
+            
+            <TextView 
+                android:id="@+id/tv_cashList_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进行中"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/grey_word"
+                android:textSize="12sp"/>
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/line" />
+
+</LinearLayout>

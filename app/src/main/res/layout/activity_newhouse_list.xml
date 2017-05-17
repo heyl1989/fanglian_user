@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_title" />
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp" 
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:id="@+id/layout_optionsLayout_newHouseList"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:tag="sticky" >
+
+        <RelativeLayout
+            android:id="@+id/layout_areaOption_newHouseList"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_areaOption_newHouseList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="地区"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_areaOption_newHouseList"
+                    android:layout_width="10dip"
+                    android:layout_height="5dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/icon_drop_button" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dip"
+                android:layout_height="25dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#f0f0f0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_sortOption_newHouseList"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_sortOption_newHouseList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="排序"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_sortOption_newHouseList"
+                    android:layout_width="10dip"
+                    android:layout_height="5dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/icon_drop_button" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dip"
+                android:layout_height="25dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#f0f0f0" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <com.flzc.fanglian.view.LoadListView
+                android:id="@+id/listview_newHouse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/theme_background"
+                android:dividerHeight="0dip"
+                android:headerDividersEnabled="true"
+                android:scrollbars="@null" >
+            </com.flzc.fanglian.view.LoadListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/ly_pop_area"
+            layout="@layout/popupwindow_area_option"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/ly_pop_sort"
+            layout="@layout/popupwindow_sortoption"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

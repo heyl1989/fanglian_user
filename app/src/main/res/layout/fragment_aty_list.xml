@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/aty_list_swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="vertical" >
+
+        <com.flzc.fanglian.view.LoadListView
+            android:id="@+id/lv_atylist_activityinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#f0f0f0"
+            android:dividerHeight="0dip"
+            android:scrollbars="@null" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

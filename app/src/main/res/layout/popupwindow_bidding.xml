@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/layout_mainLayout_popupWindow_bidding"
+        android:layout_width="match_parent"
+        android:layout_height="320dip"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:id="@+id/layout_QALayout_popupWindow_bidding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_confirmLayout_popupWindow_bidding"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="竞拍价："
+                    android:textColor="#ed4c4c"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_startPrice_popupWindow_bidding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥ 10000元"
+                    android:textColor="#ed4c4c"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="15dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距结束："
+                    android:textColor="#222222"
+                    android:textSize="16sp" />
+
+                <com.flzc.fanglian.view.TimeDownView
+                    android:id="@+id/timedownview_popupWindow_biddingDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="10dip"
+                android:background="#f0f0f0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="15dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_bidderNameHint_popupWindow_bidding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="当前拍手："
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+                <com.flzc.fanglian.view.CircleImg
+                    android:id="@+id/img_bidderImg_popupWindow_bidding"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/loading_72_72" />
+
+                <TextView
+                    android:id="@+id/tv_bidderName_popupWindow_bidding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:text="王大锤"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:id="@+id/tv_bidderPrice_popupWindow_bidding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:text="¥ 1500.0"
+                    android:textColor="#ed4c4c" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="10dip"
+                android:background="#f0f0f0" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="15dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_bidding_offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="出价："
+                    android:textColor="#222222" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_subtractMoneyLayout_popupWindow_bidding"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_toRightOf="@+id/tv_bidding_offer"
+                    android:layout_gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="23dip"
+                        android:layout_height="23dip"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/cut_money_bidding" />
+                </RelativeLayout>
+                
+                <TextView
+                    android:id="@+id/tv_money_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dip"
+                    android:layout_marginLeft="3dip"
+                    android:background="#f3f3f3"
+                    android:layout_toRightOf="@+id/layout_subtractMoneyLayout_popupWindow_bidding"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dip"
+                    android:text="¥ " />
+
+                <EditText
+                    android:id="@+id/tv_biddingMoney_popupWindow_bidding"
+                    android:layout_width="100dip"
+                    android:layout_height="23dip"
+                    android:background="#f3f3f3"
+                    android:layout_toRightOf="@+id/tv_money_sign"
+                    android:gravity="center_vertical"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:maxLength="9"
+                    android:text="1000" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_addMoneyLayout_popupWindow_bidding"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_toRightOf="@+id/tv_biddingMoney_popupWindow_bidding"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dip" >
+
+                    <ImageView
+                        android:layout_width="23dip"
+                        android:layout_height="23dip"
+                        android:src="@drawable/add_money_bidding" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_remind_times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/layout_subtractMoneyLayout_popupWindow_bidding"
+                    android:layout_below="@+id/layout_subtractMoneyLayout_popupWindow_bidding"
+                   	android:layout_marginLeft="7dp"
+                    android:text="剩余1次出价机会"
+                    android:textSize="10sp"
+                    android:textColor="#999999" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        
+
+        <RelativeLayout
+            android:id="@+id/layout_confirmLayout_popupWindow_bidding"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:background="#ed4c4c" >
+
+            <TextView
+                android:id="@+id/tv_confirmHint_popupWindow_bidding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="立即出价"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_closeLayout_popupWindow_bidding"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip" >
+
+            <ImageView
+                android:id="@+id/img_close_popupWindow_bidding"
+                android:layout_width="21dip"
+                android:layout_height="21dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_close_popwindow_grey" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

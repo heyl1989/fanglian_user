@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_title_white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="31dip"
+        android:background="#f0f0f0" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="当前定位城市"
+            android:textColor="#666666" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_locate_city"
+        android:layout_width="match_parent"
+        android:layout_height="45dip" >
+
+        <TextView
+            android:id="@+id/tv_locatedCity_chooseCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="定位当前城市"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="31dip"
+        android:background="#f0f0f0" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="热门城市"
+            android:textColor="#666666" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview_hotCity_chooseCity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#f6f6f6"
+        android:dividerHeight="0.5dip"
+        android:scrollbars="@null" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background" >
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <RadioGroup
+            android:id="@+id/rg_bottom_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_home"
+                style="@style/bottom_style"
+                android:drawableTop="@drawable/main_radiobutton_selector"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/rb_build"
+                style="@style/bottom_style"
+                android:drawableTop="@drawable/build_radiobutton_selector"
+                android:text="楼盘" />
+
+            <RadioButton
+                android:id="@+id/rb_message"
+                style="@style/bottom_style"
+                android:drawableTop="@drawable/message_radiobutton_selector"
+                android:text="消息" />
+
+            <RadioButton
+                android:id="@+id/rb_me"
+                style="@style/bottom_style"
+                android:drawableTop="@drawable/person_radiobutton_selector"
+                android:text="我" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+    
+    <ImageView 
+        android:id="@+id/img_area_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.3"/>
+    
+    <View 
+        android:id="@+id/greyLine_moreOption_popupWindow"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#f1f1f1"
+        />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/greyLine_moreOption_popupWindow"
+        >
+        
+		<ListView 
+		    android:id="@+id/listview_left_moreOption_popupWindow"
+		    android:layout_width="0dip"
+		    android:layout_weight="1"
+		    android:layout_height="300dp"
+		    android:divider="#f0f0f0"
+		    android:dividerHeight="1dip"
+		    android:background="#f6f6f6"
+		    android:scrollbars="none"
+		    android:listSelector="#00000000"
+		    >
+		    
+		</ListView>  
+		
+		<ListView 
+		    android:id="@+id/listview_right_moreOption_popupWindow"
+		    android:layout_width="0dip"
+		    android:layout_weight="2"
+		    android:layout_height="match_parent"
+		    android:divider="#f1f1f1"
+		    android:dividerHeight="1dip"
+		    android:scrollbars="none"
+		    android:visibility="gone"
+		    android:background="#ffffff"
+		    >
+		    
+		</ListView>  
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/flquan_swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"       
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <com.flzc.fanglian.view.LoadListView
+            android:id="@+id/lv_flquan_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/theme_background" 
+            android:dividerHeight="10dp">
+        </com.flzc.fanglian.view.LoadListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

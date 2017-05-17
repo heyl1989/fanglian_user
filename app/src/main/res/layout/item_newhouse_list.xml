@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/img_mainImg_item_newHouseList"
+        android:layout_width="match_parent"
+        android:layout_height="155dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loading_710_310" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_houseName_item_newHouseList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.72"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_houseName_item_newHouseList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxWidth="140dp"
+                    android:singleLine="true"
+                    android:text="盖亚房产盖亚房产"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_da_newHouseList"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/act_type_bighui"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_te_newHouseList"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/icon_newhouse_te"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_pai_newHouseList"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/icon_newhouse_pai"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tags_item_newHouseList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="5dip"
+                android:lineSpacingExtra="3dp"
+                android:text="二环  普通住宅  最低6折优惠  最低6折优惠"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/dotted_line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_price_item_newHouseList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="#ed4c4c"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="元/㎡"
+                android:textColor="#ed4c4c"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

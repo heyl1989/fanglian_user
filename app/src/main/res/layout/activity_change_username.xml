@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        >
+	    <include 
+	        layout="@layout/layout_title"
+	        />
+	    
+	    <TextView 
+	        android:id="@+id/tv_savaUserName_changeUsername"
+	        android:layout_width="50dip"
+	        android:layout_height="match_parent"
+	        android:text="保存"
+	        android:textColor="#999999"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dip"
+	        android:gravity="center"
+	        />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6"
+        >
+        <EditText 
+			android:id="@+id/et_changeUsername"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@null"            
+			android:layout_marginTop="32dip"
+			android:layout_marginLeft="30dip"
+			android:layout_marginRight="10dip"
+			android:maxLength="20"
+			android:singleLine="true"
+            />
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#999999"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_below="@+id/et_changeUsername"
+            android:layout_marginTop="3dip"
+            />
+        
+        <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="4-16个字符，可由中英文、数字、“_”组成"
+	        android:layout_marginTop="15dip"
+	        android:layout_marginLeft="30dip"
+	        android:layout_below="@+id/et_changeUsername"
+	        android:textColor="#999999"
+	        android:textSize="12sp"
+	        />
+        
+    </RelativeLayout>
+    
+    
+</LinearLayout>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/layout_cityLayout_mainFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/tv_city_mainFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_back"
+                android:drawablePadding="6dp"
+                android:drawableRight="@drawable/icon_drop_button"
+                android:gravity="center"
+                android:text="北京"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="房产超市"
+            android:textColor="@color/black_word"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_search_mainFragment"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_search_home" />
+    </RelativeLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+
+    <!-- 内容了 -->
+
+    <ScrollView
+        android:id="@+id/scrollview_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_background"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.flzc.fanglian.view.AutoScrollViewPager
+                    android:id="@+id/autoViewpager_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_word" >
+                </com.flzc.fanglian.view.AutoScrollViewPager>
+
+                <LinearLayout
+                    android:id="@+id/ll_dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/img_fire_home"
+                    android:layout_width="2dip"
+                    android:layout_height="14dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:background="#E1494B" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/img_fire_home"
+                    android:text="推荐活动"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_moreAct_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dip" >
+
+                    <ImageView
+                        android:id="@+id/img_moreAct_home"
+                        android:layout_width="9dip"
+                        android:layout_height="11dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more_act_home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dip"
+                        android:layout_toLeftOf="@+id/img_moreAct_home"
+                        android:text="全部活动"
+                        android:textColor="#666666"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="@null" >
+
+                <LinearLayout
+                    android:id="@+id/ll_activity_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dip"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/img_headNews_mainFragment"
+                    android:layout_width="72dip"
+                    android:layout_height="21dip"
+                    android:src="@drawable/headnews" />
+
+                <ImageView
+                    android:layout_width="0.5dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="3dip"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginTop="3dip"
+                    android:background="#f8f8fa" />
+
+                <com.flzc.fanglian.view.AutoTextView
+                    android:id="@+id/autoTextview_headTitle_mainFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:background="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_specialHouse_home"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="290" >
+
+                    <TextView
+                        android:id="@+id/tv_fullday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="#EC504E"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="24小时售楼"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                    
+                    <TextView
+                        android:id="@+id/tv_specialEnteranceTitle_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/tv_fullday"
+                        android:layout_alignLeft="@+id/tv_specialEnteranceText_home"
+                        android:text="天天特价"
+                        android:textColor="@color/black_word"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_specialEnteranceText_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_specialEnteranceTitle_home"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="10dip"
+                        android:text="限时低价抢房"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/img_specialEnterance_home"
+                        android:layout_width="85dip"
+                        android:layout_height="68dip"
+                        android:layout_below="@id/tv_specialEnteranceText_home"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_special_list" />
+                    <View 
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@id/img_specialEnterance_home"/>
+                    
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="match_parent"
+                    android:background="#f6f6f6" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="430"
+                    android:orientation="vertical" >
+                    
+                   
+
+                    <RelativeLayout
+                        android:id="@+id/rl_bidding_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_biddingListTextLayout_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dip"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="房产竞拍"
+                                android:textColor="@color/black_word"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dip"
+                                android:text="解锁  最优买房姿势"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="-15dp"
+                            android:layout_toRightOf="@+id/ll_biddingListTextLayout_home" >
+
+                            <ImageView
+                                android:layout_width="41dip"
+                                android:layout_height="50dip"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/icon_bidding_list" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                     <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:background="#f6f6f6" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_agent_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_agentListTextLayout_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dip"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="优惠房"
+                                android:textColor="@color/black_word"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dip"
+                                android:text="实惠购房有优惠"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ll_agentListTextLayout_home" >
+
+                            <ImageView
+                                android:layout_width="70dip"
+                                android:layout_height="35dip"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/icon_agentact_list" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/img_hot_line"
+                    android:layout_width="2dip"
+                    android:layout_height="14dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:background="#E1494B" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/img_hot_line"
+                    android:text="热门楼盘"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_morehot_build"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dip" >
+
+                    <ImageView
+                        android:id="@+id/img_morehot_build"
+                        android:layout_width="9dip"
+                        android:layout_height="11dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible"
+                        android:src="@drawable/more_act_home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dip"
+                        android:layout_toLeftOf="@+id/img_morehot_build"
+                        android:text="更多"
+                        android:textColor="#666666"
+                        android:visibility="invisible"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <com.flzc.fanglian.view.ListViewForScrollView
+                android:id="@+id/lv_home_hotbuild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

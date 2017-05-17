@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/rl_titleLayout_newHouseDetail"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/layout_title" />
+
+        <RelativeLayout
+            android:id="@+id/rl_shareLayout_newHouseDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip" >
+
+            <ImageView
+                android:id="@+id/img_iconShare_newHouseDetail"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_rmb"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/img_iconShare_newHouseDetail"
+                android:text="分享"
+                android:textColor="#666666" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_titleLayout_newHouseDetail"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/detail_mainImgLayout_newHouseDetail"
+                android:layout_width="match_parent"
+                android:layout_height="219dip" >
+
+                <ImageView
+                    android:id="@+id/img_mainImg_newHouseDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="219dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/loading_750_438" >
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/rl_checkImgLayout_newHouseList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:alpha="0.35"
+                    android:background="#000000"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/detail_area_house_pic_count_biddingDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dip"
+                        android:text="共  张图"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dip"
+                        android:layout_marginRight="3dip"
+                        android:src="@drawable/icon_total_image" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="0dip"
+                    android:layout_below="@+id/rl_checkImgLayout_newHouseList" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="#f0f0f0"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/ll_houseName_newHouseDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="0.72"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_houseName_newHouseDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="#333333"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tags_newHouseDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dip"
+                        android:lineSpacingExtra="3dp"
+                        android:text="  "
+                        android:textColor="#666666" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="1dip"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/reffer_price" />
+
+                    <TextView
+                        android:id="@+id/tv_price_newHouseDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="¥0/㎡"
+                        android:textColor="#ed4c4c"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_address_newHouseDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="  "
+                android:textColor="#999999" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_margin="10dip"
+                android:background="#f6f6f6" />
+
+            <com.flzc.fanglian.view.AlignTextView
+                android:id="@+id/tv_introduction_newHouseDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:lineSpacingExtra="2dp"
+                android:text=" "
+                android:textColor="#666666" />
+
+            <!-- 隐藏信息布局 -->
+
+            <include
+                android:id="@+id/ly_buildinfo"
+                layout="@layout/layout_newhouse_builidinfo"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_checkMoreLayout_newHouseDetail"
+                android:layout_width="match_parent"
+                android:layout_height="35dip" >
+
+                <TextView
+                    android:id="@+id/tv_checkMore_newHouseDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="查看更多信息"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="10dip"
+                    android:layout_height="5dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dip"
+                    android:layout_toRightOf="@+id/tv_checkMore_newHouseDetail"
+                    android:src="@drawable/icon_drop_button" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_detail_up"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_compare_build"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffd4d5"
+                    android:padding="3dp"
+                    android:text="对比楼盘"
+                    android:textColor="@color/red_word"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_detail_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收起"
+                        android:textColor="#5889c4"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="10dip"
+                        android:layout_height="10dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dip"
+                        android:src="@drawable/detail_up" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#f0f0f0" />
+
+            <!-- 活动 -->
+
+            <com.flzc.fanglian.view.ListViewForScrollView
+                android:id="@+id/lv_activity_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:scrollbars="@null" >
+            </com.flzc.fanglian.view.ListViewForScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#f0f0f0" />
+
+            <RelativeLayout
+                android:id="@+id/rl_checkMoreTypeLayout_newHouseDetail"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_redLine_newHouseDetail"
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/red_line" />
+
+                <TextView
+                    android:id="@+id/tv_houseTypeCountHint_newHouseDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/img_redLine_newHouseDetail"
+                    android:text="在售户型"
+                    android:textColor="#222222"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_houseTypeCount_newHouseDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/tv_houseTypeCountHint_newHouseDetail"
+                    android:text="( 种)"
+                    android:textColor="#999999"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_checkMoreHouse_newHouseDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:text="查看更多"
+                    android:textColor="#999999"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f0f0f0" />
+            </RelativeLayout>
+
+            <com.flzc.fanglian.view.ListViewForScrollView
+                android:id="@+id/listview_houseType_newHouseDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="@null" >
+            </com.flzc.fanglian.view.ListViewForScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#f0f0f0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginLeft="10dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_redLinelocation_newHouseDetail"
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/red_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/img_redLinelocation_newHouseDetail"
+                    android:text="位置及周边"
+                    android:textColor="#222222"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bmapView"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/rl_circum"
+                android:layout_width="match_parent"
+                android:layout_height="35dip" >
+
+                <TextView
+                    android:id="@+id/tv_surroundHint_newHouseDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:text="周边配套："
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/tv_surround_newHouseDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@+id/tv_surroundHint_newHouseDetail"
+                    android:text="地铁、学校、医院"
+                    android:textColor="#333333" />
+
+                <ImageView
+                    android:layout_width="8dip"
+                    android:layout_height="14dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#f0f0f0" />
+
+            <RelativeLayout
+                android:id="@+id/rl_newhouse_counselor"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_redLineAgent_newHouseDetail"
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/red_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/img_redLineAgent_newHouseDetail"
+                    android:text="置业顾问"
+                    android:textColor="#222222"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_checkMorecounselor_newHouseDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:text="查看更多"
+                    android:textColor="#999999"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f0f0f0" />
+            </RelativeLayout>
+
+            <com.flzc.fanglian.view.ListViewForScrollView
+                android:id="@+id/listview_agentList_newHouseListDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/line"
+                android:dividerHeight="1dp"
+                android:scrollbars="@null" >
+            </com.flzc.fanglian.view.ListViewForScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#f0f0f0" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottomLayout_newHouseListDetail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ED4C4C"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_saletell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/phone" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="售楼热线"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

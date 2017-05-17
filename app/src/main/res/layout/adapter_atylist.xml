@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/theme_background" />
+
+    <RelativeLayout
+        android:id="@+id/ly_atylist_itemtop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_atylist_mainimage_item"
+            android:layout_width="match_parent"
+            android:layout_height="155dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/loading_710_310" />
+
+        <ImageView
+            android:id="@+id/iv_atylist_activityTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:src="@drawable/bg_atylist_underway" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_below="@id/iv_atylist_mainimage_item"
+            android:layout_marginTop="-25dp"
+            android:background="#77000000"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_act_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="开始时间"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_act_join"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:text="0人参加"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_atylist_activityTypeIcon_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/bg_atylist_beat" />
+
+                <TextView
+                    android:id="@+id/tv_atylist_name_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:alpha="0.8"
+                    android:singleLine="true"
+                    android:text="盖亚房产"
+                    android:textColor="#222222"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_atylist_tags_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:text="活动房源"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="26dip"
+            android:layout_marginRight="7dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:background="#fcdddd"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="ddgsrh"
+            android:textColor="#ff9114" />
+
+    </LinearLayout>
+	
+</LinearLayout>

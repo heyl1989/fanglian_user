@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_cameralLayout_changeHeadImage_popupWindow"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:background="#ffffff" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="拍照" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#f1f1f1" />
+
+    <RelativeLayout
+        android:id="@+id/layout_albumlLayout_changeHeadImage_popupWindow"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:background="#ffffff" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="从相册选择" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_cancelLayout_changeHeadImage_popupWindow"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dip"
+        android:background="#ffffff" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="取消" />
+    </RelativeLayout>
+
+</LinearLayout>

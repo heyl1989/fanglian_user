@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/theme_background"/>
+    
+    <ImageView 
+        android:id="@+id/mainImg_item_newHouseResource"
+        android:layout_width="match_parent"
+        android:layout_height="170dip"
+        android:src="@drawable/loading_90_90"
+        android:background="#FAF3E1"
+        />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="41dip"
+        >
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            >
+            <TextView 
+	            android:id="@+id/tv_houseType_item_newHouseResource"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="两室一厅"
+	            android:textColor="#333333"
+	            android:textSize="14sp"
+	            />
+	        <TextView 
+	            android:id="@+id/tv_houseType_item_newHousesize"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="88 ㎡"
+	            android:textColor="#333333"
+	            android:textSize="14sp"
+	            android:layout_marginLeft="5dip"
+	            />
+        </LinearLayout>
+        
+    </RelativeLayout>
+	
+    <ImageView 
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:background="@drawable/horizontal_dotted_line"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+        />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        >
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            >
+            <TextView 
+	            android:id="@+id/tv_priceHint_item_newHouseResource"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="参考价："
+	            android:textColor="#666666"
+	            android:textSize="12sp"
+	            />
+	        <TextView 
+	            android:id="@+id/tv_price_item_newHouseResource"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="¥308"
+	            android:textColor="#ed4c4c"
+	            android:textSize="12sp"
+	            android:layout_marginLeft="5dip"
+	            />
+	        
+	        <TextView 
+	            android:id="@+id/tv_priceUnit_item_newHouseResource"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="万元"
+	            android:textColor="#666666"
+	            android:textSize="12sp"
+	            android:layout_marginLeft="5dip"
+	            />
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+</LinearLayout>
